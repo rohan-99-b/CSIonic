@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-button>
+    <ion-title>posts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Notes</ion-label>
+    <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."  [(ngModel)]="text" id="output"></ion-textarea>
+    
+  </ion-item>
+  <ion-button (click)="boldText()">Bold</ion-button>
+  <ion-button (click)="italicText()">Italic</ion-button>
+  <ion-button (click)="clearText()">Clear</ion-button>
+  <ion-button (click)="postText()">Post</ion-button>
+
+  <ion-list>
+    <!-- <ion-list-header>
+      Texts
+    </ion-list-header> -->
+    <ion-item *ngFor="let t of textlist">
+      <ion-label>{{t.task}}</ion-label>
+      <!-- <p id="italic"></p> -->
+    </ion-item>
+
+  </ion-list>
+</ion-content>

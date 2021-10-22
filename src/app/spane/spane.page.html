@@ -1,0 +1,68 @@
+<ion-split-pane contentId="main">
+  <ion-menu contentId="main" >
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>MENU</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/app/home" routerDirection="root" routerinkActive="active-link">
+          <ion-icon slot="start" name="home"></ion-icon>
+          <ion-label>
+            Home
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      
+      <!-- <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/app/tutorial" routerDirection="root" routerinkActive="active-link">
+          <ion-label>
+            Tutorial
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle> -->
+
+
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/app/login" routerDirection="root" routerinkActive="active-link">
+          <ion-icon slot="start" name="log-in"></ion-icon>
+          <ion-label>
+            Login
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/app/dashboard" routerDirection="root" routerinkActive="active-link">
+          <ion-icon slot="start" name="apps"></ion-icon>
+          <ion-label>
+            Dashboard
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/app/posts" routerDirection="root" routerinkActive="active-link">
+          <ion-icon slot="start" name="help"></ion-icon>
+          <ion-label>
+            Post
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/app/action" routerDirection="root" routerinkActive="active-link">
+          <ion-icon slot="start" name="magnet"></ion-icon>
+          <ion-label>
+            Action
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      
+
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-split-pane>
