@@ -10,21 +10,22 @@
 <ion-content>
   <ion-item>
     <ion-label>Notes</ion-label>
-    <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."  [(ngModel)]="text" id="output"></ion-textarea>
+    <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."  [(ngModel)]="text" ></ion-textarea>
     
   </ion-item>
-  <ion-button (click)="boldText()">Bold</ion-button>
-  <ion-button (click)="italicText()">Italic</ion-button>
+  <ion-button  (click)="boldText(1)">Bold</ion-button>
+  <ion-button (click)="italicText(2)">Italic</ion-button>
+  <ion-button (click)="bolditalicText(3)">Bold Italic</ion-button>
   <ion-button (click)="clearText()">Clear</ion-button>
   <ion-button (click)="postText()">Post</ion-button>
 
   <ion-list>
-    <!-- <ion-list-header>
-      Texts
-    </ion-list-header> -->
+   
     <ion-item *ngFor="let t of textlist">
-      <ion-label>{{t.task}}</ion-label>
-      <!-- <p id="italic"></p> -->
+      <ion-label *ngIf="t.behaviour==1" id="output"><b>{{t.task}}</b> </ion-label>
+      <ion-label *ngIf="t.behaviour==2"><i>{{t.task}}</i></ion-label>
+      <ion-label *ngIf="t.behaviour==3"><b><i>{{t.task}}</i></b> </ion-label>
+      <ion-label *ngIf="t.behaviour !==1 && t.behaviour!==2 && t.behaviour!==3">{{t.task}}</ion-label>
     </ion-item>
 
   </ion-list>
