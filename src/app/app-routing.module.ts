@@ -15,6 +15,8 @@ const routes: Routes = [
     path: 'app',
     loadChildren: () => import('./spane/spane.module').then( m => m.SpanePageModule)
   },
+  
+  
 ];
 
 @NgModule({

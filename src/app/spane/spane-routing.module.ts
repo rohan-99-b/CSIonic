@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { UserGuard } from '../guard/user.guard';
 import { SpanePage } from './spane.page';
 
 const routes: Routes = [
@@ -23,7 +24,10 @@ const routes: Routes = [
         },
         {
           path: 'dashboard',
-          loadChildren: () => import('../dashboard/dashboard.module').then( m => m.DashboardPageModule)
+          loadChildren: () => import('../dashboard/dashboard.module').then( m => m.DashboardPageModule),
+          // canActivate:[UserGuard],
+          // canActivateChild:[UserGuard],
+          // canLoad:[UserGuard]
         },
         {
           path: 'posts',
@@ -32,6 +36,10 @@ const routes: Routes = [
         {
           path: 'action',
           loadChildren: () => import('../action/action.module').then( m => m.ActionPageModule)
+        },
+        {
+          path: 'loginuser',
+          loadChildren: () => import('../loginuser/loginuser.module').then( m => m.LoginuserPageModule)
         },
       
     ]

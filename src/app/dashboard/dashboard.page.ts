@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Device } from '@capacitor/device';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
@@ -10,28 +11,42 @@ import { Router } from '@angular/router';
 })
 export class DashboardPage implements OnInit {
   
-  name='rohanbera@gmail.com';
-
-   //infoD:any
-   //device: Array<Object>=[];
-  fruits = ['Apple', 'Orange', 'Banana'];
+  user:any
+  info2:any
+  info1:any
+  inf022:any
    
   constructor(public router:Router) {
   //  this.device=this.infoD
    }
 
   async getDInfo(){
-   const infoD=await Device.getInfo();
-    console.log(infoD);
+   var infoD=await Device.getInfo();
+   this.info1=Object.values(infoD)
+   console.log(Object.values(infoD));
+  
   }
 
   async getBInfo(){
-    const info = await Device.getBatteryInfo();
-    console.log(info);
+    var info = await Device.getBatteryInfo();
+    this.info2=Object.values(info)
+    this.inf022=JSON.stringify(this.info2)
+    console.log(this.inf022);
   }  
 
 
   ngOnInit() {
+    // var infoD=Device.getInfo();
+    // console.log(infoD);
+
+    this.user=window.localStorage.getItem('id')
+    if(!this.user){
+      
+      this.router.navigate(["/app/login"])
+    }
+    else{
+      this.router.navigate(["/app/dashboard"])
+    }
   }
 
   logout(){

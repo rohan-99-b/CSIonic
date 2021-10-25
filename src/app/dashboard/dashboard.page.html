@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-button>
     <ion-title>dashboard </ion-title>
-    <ion-label>Welcome {{name}}</ion-label>
+    <ion-label>Welcome {{user}}</ion-label>
     <ion-button (click)='logout()'>Logout</ion-button>
   </ion-toolbar>
 </ion-header>
@@ -12,10 +12,15 @@
 <ion-content>
   <ion-button (click)='getDInfo()'>Check device info</ion-button>
   <ion-button (click)='getBInfo()'>Check batery info</ion-button>
-  <ion-item *ngFor="let i of infoD">
+
+  <ion-item *ngFor="let i of info1">
     {{i}}
   </ion-item>
-  <ion-item *ngFor="let i of info">
+
+  <ul></ul>
+
+  <ion-item *ngFor="let i of info2">
+    <!-- <ion-label>{{i}}</ion-label> -->
     {{i}}
   </ion-item>
 </ion-content>

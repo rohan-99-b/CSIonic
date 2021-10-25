@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ActionPageRoutingModule } from './action-routing.module';
+import { ContactsPageRoutingModule } from './contacts-routing.module';
 //import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
-import { ActionPage } from './action.page';
+import { ContactsPage } from './contacts.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ActionPageRoutingModule
+    ContactsPageRoutingModule
   ],
-  declarations: [ActionPage]
+  declarations: [ContactsPage]
 })
-export class ActionPageModule {}
+export class ContactsPageModule {}

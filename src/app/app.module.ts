@@ -7,6 +7,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+//import { Contacts } from '@ionic-native/contacts';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
