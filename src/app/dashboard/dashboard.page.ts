@@ -23,7 +23,7 @@ export class DashboardPage implements OnInit {
   async getDInfo(){
    var infoD=await Device.getInfo();
    this.info1=Object.values(infoD)
-   console.log(Object.values(infoD));
+   //console.log(Object.values(infoD));
   
   }
 
@@ -31,7 +31,7 @@ export class DashboardPage implements OnInit {
     var info = await Device.getBatteryInfo();
     this.info2=Object.values(info)
     this.inf022=JSON.stringify(this.info2)
-    console.log(this.inf022);
+    //console.log(this.inf022);
   }  
 
 
