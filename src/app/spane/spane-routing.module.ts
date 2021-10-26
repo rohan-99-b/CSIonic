@@ -6,6 +6,11 @@ import { SpanePage } from './spane.page';
 
 const routes: Routes = [
   {
+    path:'',
+    redirectTo:'home',
+    pathMatch:'full'
+  },
+  {
     path: '',
     component: SpanePage,
     children:[
